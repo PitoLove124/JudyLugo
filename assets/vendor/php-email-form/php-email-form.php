@@ -1,3 +1,4 @@
+use Psr\Log\LoggerInterface;
 <?php
 /**
  * PHP Email Form
@@ -1128,7 +1129,7 @@ class PHPMailer
             return;
         }
         //Is this a PSR-3 logger?
-        if ($this->Debugoutput instanceof \Psr\Log\LoggerInterface) {
+        if ($this->Debugoutput instanceof LoggerInterface) {
             $this->Debugoutput->debug($str);
 
             return;
